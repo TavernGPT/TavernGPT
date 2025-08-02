@@ -1,0 +1,10 @@
+# Ignore secrets folder
+.project/
+.secrets/
+
+# Common files to ignore
+.DS_Store
+*.log
+*.tmp
+*.swp
+*~ 
