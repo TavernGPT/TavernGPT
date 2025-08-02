@@ -1,0 +1,23 @@
+/* App-specific styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--custom-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--custom-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--custom-muted);
+} 
