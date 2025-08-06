@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# TavernGPT Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React TypeScript dashboard for managing TavernGPT accounts, karma credits, and API usage.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Authentication Flow**: OAuth provider selection (Google, GitHub, Discord, Email)
+- **Responsive Design**: Mobile-first design with Tailwind CSS
+- **Dashboard Layout**: Modern sidebar navigation with header
+- **State Management**: Zustand for global state management
+- **Routing**: React Router for navigation between pages
+- **Mock Authentication**: Simulated authentication flow for development
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Zustand for state management
+- React Router for navigation
+- Create React App for build tooling
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 18+ and npm/yarn
+- Modern web browser
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
+### Available Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── components/
+│   ├── auth/
+│   │   └── LoginPage.tsx          # Authentication page
+│   ├── dashboard/
+│   │   ├── DashboardHome.tsx      # Main dashboard content
+│   │   └── DashboardLayout.tsx    # Dashboard layout wrapper
+│   └── layout/
+│       ├── Header.tsx             # Top navigation header
+│       └── Sidebar.tsx            # Side navigation
+├── stores/
+│   └── authStore.ts               # Authentication state management
+├── App.tsx                        # Main app component with routing
+├── index.tsx                      # App entry point
+└── index.css                      # Global styles with Tailwind
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## User Flow
 
-## Learn More
+1. **Landing Page**: Users see authentication options (Google, GitHub, Discord, Email)
+2. **Authentication**: Mock authentication with loading states and error handling
+3. **Dashboard**: Protected route with sidebar navigation and user info
+4. **Logout**: Users can sign out and return to landing page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Development Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Uses mock authentication responses during development
+- Responsive design for mobile and desktop
+- Clean, modern UI following TavernGPT branding
+- TypeScript for type safety
+- Tailwind CSS for consistent styling
+
+## Future Enhancements
+
+- Real Privy OAuth integration
+- Karma credit management interface
+- API key generation and management
+- Usage analytics and reporting
+- Payment processing integration
+- 0G network integration
+
+## Contributing
+
+This is part of the TavernGPT platform development. See the main project documentation for contribution guidelines.
